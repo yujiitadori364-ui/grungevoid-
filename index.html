@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>grungevoid. — drop 001 bientôt</title>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060505;--bg2:#0f0b0b;--ink:#d9d4cc;--mute:#7d7670;--blood:#a3121e;--deep:#4a0a10;--line:#2a2121;--f1:'UnifrakturCook','Pirata One','Times New Roman',serif;--f2:'IM Fell English','Georgia',serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#060505}}
+:root[data-theme="dark"]{--bg:#060505}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font-family:var(--f2);font-size:1.02rem;line-height:1.55;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:89;background:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.75) 100%)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.18;mix-blend-mode:screen;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+.bar{background:var(--deep);color:var(--ink);font-size:.78rem;padding:.4rem;overflow:hidden;white-space:nowrap;letter-spacing:.18em;text-transform:uppercase;font-style:italic}
+.bar span{display:inline-block;animation:mq 30s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:.7rem 1.2rem;background:rgba(6,5,5,.94);border-bottom:1px solid var(--line)}
+.burger{justify-self:start;background:none;border:0;color:var(--ink);font:inherit;text-transform:uppercase;letter-spacing:.14em;cursor:pointer;font-size:.8rem}
+nav.d{display:none;gap:1.4rem;font-size:.82rem;text-transform:uppercase;letter-spacing:.14em;justify-self:start}
+nav.d a{text-decoration:none}nav.d a:hover,.cta:hover{color:var(--blood)}
+.logo{font-family:var(--f1);font-size:2.2rem;text-decoration:none;line-height:1}
+.logo i{color:var(--blood);font-style:normal}
+.cta{justify-self:end;font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;text-decoration:none}
+.menu{position:fixed;inset:0;z-index:95;background:var(--bg);display:none;flex-direction:column;justify-content:center;gap:.8rem;padding:2rem}
+.menu.open{display:flex}
+.menu a{font-family:var(--f1);font-size:clamp(2.8rem,13vw,4.8rem);text-decoration:none;line-height:1}
+.menu a:hover{color:var(--blood)}
+.menu button{position:absolute;top:calc(1rem + env(safe-area-inset-top,0px));right:1.2rem;background:none;border:0;color:var(--ink);font-size:2rem;cursor:pointer}
+.hero{position:relative;min-height:92vh;display:grid;align-items:center;padding:3rem 1.2rem;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 50% 35%,#35080d 0,transparent 62%),var(--bg);overflow:hidden;text-align:center}
+.rose{position:absolute;left:50%;top:50%;width:min(130vw,820px);transform:translate(-50%,-50%);opacity:.5;pointer-events:none;animation:spin 140s linear infinite}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.hero>div{position:relative;z-index:1}
+.hero small{letter-spacing:.4em;text-transform:uppercase;color:var(--blood);font-size:.78rem;font-style:italic}
+.hero h1{font-family:var(--f1);font-weight:700;font-size:clamp(4.2rem,22vw,12.5rem);line-height:.84;margin:1rem 0;text-shadow:0 0 40px rgba(163,18,30,.55),0 4px 0 #000;animation:fl 5s infinite}
+.hero h1 em{font-style:normal;color:var(--blood)}
+@keyframes fl{0%,90%,100%{opacity:1}92%{opacity:.7}94%{opacity:1}96%{opacity:.8}}
+.orn{color:var(--blood);letter-spacing:.9em;margin:1rem 0}
+.hero p{max-width:30rem;margin:0 auto 1.8rem;color:var(--mute);font-style:italic}
+.btn{display:inline-block;background:transparent;color:var(--ink);font:inherit;text-transform:uppercase;letter-spacing:.2em;padding:.95rem 2rem;text-decoration:none;border:1px solid var(--blood);cursor:pointer;box-shadow:inset 0 0 0 3px var(--bg),inset 0 0 0 4px var(--line);transition:.25s}
+.btn:hover{background:var(--blood);box-shadow:0 0 28px rgba(163,18,30,.6)}
+.big{overflow:hidden;white-space:nowrap;padding:.5rem 0;border-block:1px solid var(--line);margin:0}
+.big span{display:inline-block;font-family:var(--f1);font-size:clamp(2.6rem,8vw,5rem);color:transparent;-webkit-text-stroke:1px var(--mute);animation:mq 26s linear infinite}
+.row{padding:3.2rem 0 1rem}
+.rh{display:flex;justify-content:space-between;align-items:baseline;padding:0 1.2rem;margin-bottom:1.1rem;gap:1rem}
+.rh h2{font-family:var(--f1);font-weight:700;font-size:clamp(2.4rem,8vw,3.8rem);line-height:1}
+.rh a{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;border-bottom:1px solid var(--blood);text-decoration:none;white-space:nowrap}
+.car{display:flex;gap:6px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 1.2rem;scrollbar-width:none}
+.car::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(62vw,260px);scroll-snap-align:start;text-decoration:none;display:block}
+.pic{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;position:relative;clip-path:polygon(0 100%,0 24%,6% 14%,50% 0,94% 14%,100% 24%,100% 100%);background:radial-gradient(circle at 50% 46%,var(--c) 0,#150a0b 55%,#050404 100%)}
+.pic svg{width:56%;filter:drop-shadow(0 12px 20px #000);transition:transform .35s}
+.card:hover .pic svg{transform:scale(1.12) rotate(-4deg)}
+.card:hover .pic{filter:brightness(1.3)}
+.tag{position:absolute;bottom:.8rem;left:50%;transform:translateX(-50%);color:var(--ink);font-size:.68rem;text-transform:uppercase;letter-spacing:.22em;font-style:italic}
+.info{padding:.8rem .2rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:.4rem;font-size:.82rem}
+.red{background:var(--ink);width:55%;height:.9em;display:inline-block}
+.add{color:var(--blood);text-transform:uppercase;letter-spacing:.12em;white-space:nowrap;font-size:.78rem}
+.sep{text-align:center;color:var(--deep);letter-spacing:1.2em;padding:2.2rem 0 0;font-size:1.2rem}
+.how{padding:4rem 1.2rem 2rem;text-align:center}.how h2{font-family:var(--f1);font-weight:700;font-size:clamp(2.4rem,8vw,3.8rem);line-height:1;margin-bottom:2rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;max-width:960px;margin:0 auto 1.5rem;text-align:left}
+.steps div{border:1px solid var(--line);padding:1.4rem;background:var(--bg2)}.steps b{font-family:var(--f1);font-size:3.2rem;color:var(--blood);line-height:1;display:block}.steps h3{font-family:var(--f1);font-size:1.5rem;font-weight:700;margin:.2rem 0}.steps p{color:var(--mute);font-size:.9rem}
+.note{max-width:620px;margin:0 auto;color:var(--mute);font-size:.85rem;font-style:italic}
+.join{margin:3rem 0 0;padding:5rem 1.2rem;text-align:center;background:radial-gradient(ellipse at 50% 100%,#2c070b 0,transparent 70%),var(--bg2);border-block:1px solid var(--line)}
+.join h2{font-family:var(--f1);font-weight:700;font-size:clamp(2.6rem,9vw,4.4rem);line-height:1}
+.join p{color:var(--mute);margin:.8rem 0 1.6rem;font-style:italic}
+footer{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:2rem;padding:3rem 1.2rem;font-size:.9rem}
+footer h4{font-family:var(--f1);font-size:1.4rem;margin-bottom:.5rem;font-weight:700}
+footer a{display:block;color:var(--mute);text-decoration:none;padding:.15rem 0}footer a:hover{color:var(--blood)}
+footer .logo{font-size:3.2rem;display:block}
+.cp{text-align:center;color:var(--mute);font-size:.75rem;padding-bottom:2rem}
+@media(min-width:900px){nav.d{display:flex}.burger{display:none}.card{flex-basis:300px}.car,.rh{padding-inline:2.5rem}}
+@media(prefers-reduced-motion:reduce){.rose,.hero h1,.bar span,.big span{animation:none}}
+</style>
+</head>
+<body>
+<div class="bar"><span>drop 001 bientôt ✠ petites séries ✠ no restock ✠ pièces vérifiées ✠ livraison au togo ✠ drop 001 bientôt ✠ petites séries ✠ no restock ✠ pièces vérifiées ✠ livraison au togo ✠</span></div>
+<header>
+  <button class="burger" id="bo">Menu</button>
+  <nav class="d" id="nav"></nav>
+  <a class="logo" href="#top">grunge<i>void</i></a>
+  <a class="cta" id="wa0" href="#" target="_blank" rel="noopener">Me prévenir</a>
+</header>
+<div class="menu" id="menu"><button id="bc" aria-label="Fermer">×</button></div>
+
+<div class="hero" id="top">
+  <svg class="rose" id="rose" viewBox="-200 -200 400 400" fill="none" stroke="#a3121e" stroke-width="1.5"></svg>
+  <div>
+    <small>collection 001</small>
+    <h1>Fall into<br>the <em>void</em></h1>
+    <div class="orn">✠ ✠ ✠</div>
+    <p>Bijoux, accessoires, shorts, hauts et casquettes. Des pièces sombres, usées, gothiques, vérifiées une par une. Petites séries, jamais de réassort.</p>
+    <a class="btn" id="wa1" href="#" target="_blank" rel="noopener">Rejoindre la liste</a>
+  </div>
+</div>
+
+<div class="big"><span>grungevoid ✠ no restock ✠ drop 001 ✠ grungevoid ✠ no restock ✠ drop 001 ✠ grungevoid ✠ no restock ✠ drop 001 ✠ grungevoid ✠ no restock ✠ drop 001 ✠</span></div>
+<div id="rows"></div>
+
+<section class="how" id="how">
+  <h2>Comment ça marche</h2>
+  <div class="steps">
+    <div><b>I</b><h3>Tu choisis</h3><p>Tu repères la pièce, la taille et la couleur, puis tu nous écris sur WhatsApp.</p></div>
+    <div><b>II</b><h3>Tu confirmes</h3><p>On te confirme la disponibilité et le délai. Tu règles un acompte ou la totalité du prix.</p></div>
+    <div><b>III</b><h3>On vérifie, on livre</h3><p>La pièce est commandée, contrôlée à sa réception, puis livrée au Togo.</p></div>
+  </div>
+  <p class="note">Les pièces en précommande ne sont pas encore en stock : les photos peuvent venir du fournisseur. Si une pièce n’arrive pas ou n’est pas conforme, tu es remboursé.</p>
+</section>
+<div class="join">
+  <h2>Sois prévenu en premier</h2>
+  <p>Envoie-nous un message, on te donne l’accès avant l’ouverture du drop.</p>
+  <a class="btn" id="wa2" href="#" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+  <p style="margin:1.4rem 0 0"><a href="https://www.instagram.com/grunge.void" target="_blank" rel="noopener" style="border-bottom:1px solid var(--blood);text-decoration:none;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase">ou suis-nous sur Instagram @grunge.void</a></p>
+</div>
+
+<footer>
+  <div><a class="logo" href="#top">grunge<i>void</i></a><span style="color:var(--mute)">Fall into the void.</span></div>
+  <div><h4>Boutique</h4><div id="fl"></div></div>
+  <div><h4>Aide</h4><a id="wa3" href="#" target="_blank" rel="noopener">Contact WhatsApp</a><a id="wa4" href="#" target="_blank" rel="noopener">Livraison au Togo</a></div>
+  <div><h4>Suivre</h4><a href="https://www.instagram.com/grunge.void" target="_blank" rel="noopener">Instagram @grunge.void</a></div>
+</footer>
+<div class="cp">© 2026 grungevoid. Tous droits réservés.</div>
+
+<script>
+var WA="22871421161",$=function(i){return document.getElementById(i)};
+var link=function(t){return "https://wa.me/"+WA+"?text="+encodeURIComponent(t)};
+var cols=["#7a0f19","#3d3535","#5a1a1f","#2c2a2a","#6b1218","#4a4040"];
+var C=[["Bijoux","Bi"],["Accessoires","Ac"],["Shorts","Sh"],["Hauts","Ha"],["Casquettes","Ca"]];
+["wa0","wa1","wa2","wa3"].forEach(function(i){$(i).href=link("Salut grungevoid, prévenez-moi pour le drop 001 !")});
+$("wa4").href=link("Salut grungevoid, j’ai une question sur la livraison au Togo.");
+var links=C.map(function(c){return '<a href="#'+c[0]+'">'+c[0]+'</a>'}).join("");
+$("nav").innerHTML=links;$("fl").innerHTML=links;
+$("menu").insertAdjacentHTML("beforeend",links);
+var g='<circle r="190"/><circle r="175" stroke-dasharray="3 7"/><circle r="110"/><circle r="40"/>';
+for(var a=0;a<12;a++){g+='<g transform="rotate('+a*30+')"><path d="M0 -40V-190"/><path d="M0 -110Q30 -150 0 -175Q-30 -150 0 -110Z"/></g>'}
+$("rose").innerHTML=g;
+var k=0,P='<svg viewBox="0 0 100 100" fill="none" stroke="#d9d4cc" stroke-width="2.2" stroke-linejoin="round">',S={Bi:P+'<path d="M18 8Q50 72 82 8"/><path d="M46 50h8v34h-8zM36 60h28v8H36z"/></svg>',Ac:P+'<rect x="6" y="42" width="88" height="16"/><rect x="38" y="36" width="24" height="28"/><path d="M46 50h8"/></svg>',Sh:P+'<path d="M24 22h52l8 56H56l-6-30-6 30H16z"/><path d="M24 30h52"/></svg>',Ha:P+'<path d="M34 18L10 32l9 15 10-6v42h42V41l10 6 9-15-24-14q-15 10-32 0z"/></svg>',Ca:P+'<path d="M18 64Q18 28 52 28t32 36z"/><path d="M84 64q14 1 14 9H30"/><path d="M52 28v36"/></svg>'};
+$("rows").innerHTML=C.map(function(c,r){var h='<section class="row" id="'+c[0]+'"><div class="rh"><h2>'+c[0]+'</h2><a target="_blank" rel="noopener" href="'+link("Salut grungevoid, prévenez-moi pour la catégorie "+c[0]+" du drop 001 !")+'">Me prévenir</a></div><div class="car">';
+for(var j=1;j<=5;j++){k++;h+='<a class="card" target="_blank" rel="noopener" href="'+link("Salut grungevoid, je veux précommander la pièce "+c[0]+" #"+j+".\nTaille :\nCouleur :")+'"><div class="pic" style="--c:'+cols[k%6]+'">'+S[c[1]]+'<span class="tag">précommande</span></div><div class="info"><span class="red"></span><span class="add">Précommander</span></div></a>'}
+return h+'</div>'+(r<C.length-1?'<div class="sep">✠ ✠ ✠</div>':'')+'</section>'}).join("");
+$("bo").onclick=function(){$("menu").classList.add("open")};
+$("bc").onclick=function(){$("menu").classList.remove("open")};
+$("menu").onclick=function(e){if(e.target.tagName==="A")$("menu").classList.remove("open")};
+</script>
+</body>
+</html>
